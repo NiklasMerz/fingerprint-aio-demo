@@ -25,25 +25,26 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
     Fingerprint.isAvailable(isAvailableSuccess, isAvailableError);
 
-    /**
-    * @return {
-    *      isAvailable:boolean,
-    *      isHardwareDetected:boolean,
-    *      hasEnrolledFingerprints:boolean
-    *   }
-    */
+    function successCallback(){
+      alert("Authenticaion successfull");
+    }
+
+    function errorCallback(){
+      alert("Authenticaion invalid")
+    }
+
     function isAvailableSuccess(result) {
-      console.log("Fingerprint available: " + JSON.stringify(result));
+      alert("Fingerprint available: " + JSON.stringify(result));
       if (result.isAvailable) {
         Fingerprint.show({
-          clientId: "myAppName",
-          clientSecret: "a_very_secret_encryption_key"
+          clientId: "Fingerprint-Demo",
+          clientSecret: "password"
         }, successCallback, errorCallback);
       }
     }
 
     function isAvailableError(message) {
-      console.log("isAvailableError(): " + message);
+      alert("isAvailableError(): " + message);
     }
 
 
