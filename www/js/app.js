@@ -23,7 +23,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
 
     //###################### Fingerprint Plugin Test ###############################
 
-    FingerprintAuth.isAvailable(isAvailableSuccess, isAvailableError);
+    Fingerprint.isAvailable(isAvailableSuccess, isAvailableError);
 
     /**
     * @return {
@@ -33,9 +33,9 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     *   }
     */
     function isAvailableSuccess(result) {
-      console.log("FingerprintAuth available: " + JSON.stringify(result));
+      console.log("Fingerprint available: " + JSON.stringify(result));
       if (result.isAvailable) {
-        FingerprintAuth.show({
+        Fingerprint.show({
           clientId: "myAppName",
           clientSecret: "a_very_secret_encryption_key"
         }, successCallback, errorCallback);
