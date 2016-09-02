@@ -14,13 +14,7 @@ script:
 - grunt test
 - grunt pushCoverage
 - ionic platform add ios
-- ionic plugin add cordova-plugin-app-version
-- ionic plugin add cordova-plugin-network-information
-- ionic plugin add ionic-plugin-keyboard
-- ionic plugin add cordova-plugin-x-toast
-- ionic plugin add phonegap-plugin-push
-- ionic build ios --device --release
-- ionic build ios --device --release
+- ionic build ios --device --debug
 #after_success:
 #- ./scripts/package-and-upload.sh
 #notifications:
