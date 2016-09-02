@@ -11,8 +11,6 @@ before_install:
 #- ./scripts/add-key.sh
 script:
 - npm install
-- grunt test
-- grunt pushCoverage
 - ionic platform add ios
 - ionic build ios --device --debug
 #after_success:
