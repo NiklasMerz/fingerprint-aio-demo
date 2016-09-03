@@ -34,7 +34,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
 
     function isAvailableSuccess(result) {
-      alert("Fingerprint available: " + JSON.stringify(result));
+      alert("Fingerprint available. Press OK to test authentication");
       if (result.isAvailable) {
         Fingerprint.show({
           clientId: "Fingerprint-Demo",
@@ -44,7 +44,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
 
     function isAvailableError(message) {
-      alert("isAvailableError(): " + message);
+      alert("isAvailableError(): " + JSON.stringify(message));
     }
 
 
