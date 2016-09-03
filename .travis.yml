@@ -12,8 +12,8 @@ script:
 - npm install
 - ionic platform add ios
 - ionic plugin add cordova-plugin-fingerprint-aio
-- ionic build ios --device --debug
-- ionic build ios --device --debug
+- ionic build ios --device
+- ionic build ios --device
 #after_success:
 #- ./scripts/package-and-upload.sh
 #notifications:
