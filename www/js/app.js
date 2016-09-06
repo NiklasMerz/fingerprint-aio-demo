@@ -20,35 +20,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       // org.apache.cordova.statusbar required
       StatusBar.styleDefault();
     }
-
-    //###################### Fingerprint Plugin Test ###############################
-
-    Fingerprint.isAvailable(isAvailableSuccess, isAvailableError);
-
-    function successCallback(){
-      alert("Authenticaion successfull");
-    }
-
-    function errorCallback(){
-      alert("Authenticaion invalid")
-    }
-
-    function isAvailableSuccess(result) {
-      alert("Fingerprint available. Press OK to test authentication");
-      if (result.isAvailable) {
-        Fingerprint.show({
-          clientId: "Fingerprint-Demo",
-          clientSecret: "password"
-        }, successCallback, errorCallback);
-      }
-    }
-
-    function isAvailableError(message) {
-      alert("isAvailableError(): " + JSON.stringify(message));
-    }
-
-
-    //##################### Fingerprint Plugin Test End#############################
   });
 })
 
@@ -75,35 +46,6 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
       'tab-dash': {
         templateUrl: 'templates/tab-dash.html',
         controller: 'DashCtrl'
-      }
-    }
-  })
-
-  .state('tab.chats', {
-    url: '/chats',
-    views: {
-      'tab-chats': {
-        templateUrl: 'templates/tab-chats.html',
-        controller: 'ChatsCtrl'
-      }
-    }
-  })
-  .state('tab.chat-detail', {
-    url: '/chats/:chatId',
-    views: {
-      'tab-chats': {
-        templateUrl: 'templates/chat-detail.html',
-        controller: 'ChatDetailCtrl'
-      }
-    }
-  })
-
-  .state('tab.account', {
-    url: '/account',
-    views: {
-      'tab-account': {
-        templateUrl: 'templates/tab-account.html',
-        controller: 'AccountCtrl'
       }
     }
   });
