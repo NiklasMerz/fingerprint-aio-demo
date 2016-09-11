@@ -29,7 +29,7 @@ angular.module('starter.controllers', [])
     }
 
     function errorCallback(err){
-      alert("Authentication invalid" + err);
+      alert("Authentication invalid " + err);
     }
 
   };
