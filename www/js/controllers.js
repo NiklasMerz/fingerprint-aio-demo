@@ -1,10 +1,12 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['ngCordova'])
 
-.controller('DashCtrl', function($scope, $ionicPlatform) {
+.controller('DashCtrl', function($scope, $ionicPlatform, $cordovaFingerprint) {
 
   $ionicPlatform.ready(function() {
     //Is available
-    Fingerprint.isAvailable(isAvailableSuccess, isAvailableError);
+    $cordovaFingerprint.isAvailable().then(
+      isAvailableSuccess, isAvailableError
+    );
     $scope.available = "Not checked";
 
     function isAvailableSuccess(result) {
@@ -19,10 +21,10 @@ angular.module('starter.controllers', [])
 
   $scope.showAuth = function(){
     //Authenticate
-    Fingerprint.show({
+    $cordovaFingerprint.show({
       clientId: "Fingerprint-Demo",
       clientSecret: "password"
-    }, successCallback, errorCallback);
+    }).then(successCallback, errorCallback);
 
     function successCallback(){
       alert("Authentication successfull");
