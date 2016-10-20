@@ -4,16 +4,18 @@ angular.module('starter.controllers', [])
 
   $ionicPlatform.ready(function() {
     //Is available
-    Fingerprint.isAvailable(isAvailableSuccess, isAvailableError);
-    $scope.available = "Not checked";
+    if (typeof Fingerprint != 'undefined') {
+      Fingerprint.isAvailable(isAvailableSuccess, isAvailableError);
+      $scope.available = "Not checked";
 
-    function isAvailableSuccess(result) {
-      $scope.available = "Fingerprint available";
-    }
+      function isAvailableSuccess(result) {
+        $scope.available = "Fingerprint available";
+      }
 
-    function isAvailableError(message) {
-      $scope.available = "isAvailableError(): " + JSON.stringify(message);
-      console.error(message);
+      function isAvailableError(message) {
+        $scope.available = "isAvailableError(): " + JSON.stringify(message);
+        console.error(message);
+      }
     }
   });
 
