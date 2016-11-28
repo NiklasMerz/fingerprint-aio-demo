@@ -1,0 +1,3 @@
+import { BuildContext } from './util/interfaces';
+export declare function build(context: BuildContext): Promise<void>;
+export declare function buildUpdate(event: string, filePath: string, context: BuildContext): Promise<{}>;
