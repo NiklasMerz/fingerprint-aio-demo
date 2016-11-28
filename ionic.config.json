@@ -1,4 +1,6 @@
 {
   "name": "fingerprint-aio-demo",
-  "app_id": "227c5879"
+  "app_id": "",
+  "v2": true,
+  "typescript": true
 }
