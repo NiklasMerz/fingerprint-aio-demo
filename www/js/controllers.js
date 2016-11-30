@@ -4,8 +4,8 @@ angular.module('starter.controllers', [])
 
   $ionicPlatform.ready(function() {
     //Is available
-    if (typeof Fingerprint != 'undefined') {
-      Fingerprint.isAvailable(isAvailableSuccess, isAvailableError);
+    if (typeof window.Fingerprint != 'undefined') {
+      window.Fingerprint.isAvailable(isAvailableSuccess, isAvailableError);
       $scope.available = "Not checked";
 
       function isAvailableSuccess(result) {
@@ -21,7 +21,7 @@ angular.module('starter.controllers', [])
 
   $scope.showAuth = function(){
     //Authenticate
-    Fingerprint.show({
+    window.Fingerprint.show({
       clientId: "Fingerprint-Demo",
       clientSecret: "password"
     }, successCallback, errorCallback);
