@@ -14,6 +14,7 @@ export class HomePage {
   }
 
   check(){
+    console.log('check');
     FingerprintAIO.isAvailable().then(result =>{
       alert(result);
     }).catch(err => {
@@ -22,6 +23,7 @@ export class HomePage {
   }
 
   show(){
+    console.log('show');
     FingerprintAIO.show().then(result => {
       alert(result);
     }).catch(err => {
