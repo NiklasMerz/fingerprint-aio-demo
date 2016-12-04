@@ -16,18 +16,18 @@ export class HomePage {
   check(){
     console.log('check');
     FingerprintAIO.isAvailable().then(result =>{
-      alert(result);
+      console.log(result);
     }).catch(err => {
-      alert(err);
+      console.log(err);
     });
   }
 
   show(){
     console.log('show');
     FingerprintAIO.show().then(result => {
-      alert(result);
+      console.log(result);
     }).catch(err => {
-      alert(err);
+      console.log(err);
     });
   }
 
