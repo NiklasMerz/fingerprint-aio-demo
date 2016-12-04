@@ -25,8 +25,7 @@ export class HomePage {
   show(){
     console.log('show');
     FingerprintAIO.show({
-     clientId: "Fingerprint-Demo",
-    clientSecret: "password"
+     clientId: "Fingerprint-Demo"
  }).then(result => {
       console.log(result);
     }).catch(err => {
