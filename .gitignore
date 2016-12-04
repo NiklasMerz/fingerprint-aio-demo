@@ -6,3 +6,4 @@ platforms/
 plugins/
 .tmp/
 www/
+*.log
