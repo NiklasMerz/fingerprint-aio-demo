@@ -5,8 +5,4 @@ Demo/Test app for my cordova fingerprint plugin
 
 ===============================================
 
-## Status
-* Android working
-* iOS work in progress
-
 [Example Code](https://github.com/NiklasMerz/fingerprint-aio-demo/blob/master/www/js/controllers.js)
