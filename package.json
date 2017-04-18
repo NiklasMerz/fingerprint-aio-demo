@@ -1,8 +1,9 @@
 {
   "name": "fingerprint-aio-demo",
-  "version": "0.2.0",
+  "version": "1.0.0",
   "license": "MIT",
   "description": "fingerprint-aio-demo: An Ionic project",
+  "repository": "https://github.com/NiklasMerz/fingerprint-aio-demo",
   "dependencies": {
     "gulp": "^3.5.6",
     "gulp-sass": "^2.0.4",
